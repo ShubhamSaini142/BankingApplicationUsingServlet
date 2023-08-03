@@ -2,38 +2,108 @@
 <html>
 
 <head>
-	<meta charset="ISO-8859-1">
-	<title>Insert title here</title>
+    <meta charset="UTF-8">
+    <title>Transfer Money</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 
 <body>
-	<form action="transfermoney">
-		<label>cust_id</label><br>
-		<input type="text" name="cust_id"><br><br>
-		
-		<label>bank_name</label><br>
-		<input type="text" name="bank_name"><br><br>
-		
-		<label>IFSC</label><br>
-		<input type="text" name="IFSC"><br><br>
-		
-		<label> sender_accno</label><br>
-		<input type="text" name="senderaccno"><br><br>
-		
-		<label>reciever_ifsc</label><br>
-		<input type="text" name="recieverifsc"><br><br>
-
-		<label>reciever_accno</label><br>
-		<input type="text" name="recieveraccno"><br><br>
-		
-		<label>amount</label><br>
-		<input type="text" name="amount"><br><br>
-
-		<label>Pin</label><br>
-		<input type="number" name="pin"><br><br>
-		<input type="submit" value="Transfer">
-	</form>
-
+    <div class="container">
+        <h1>Transfer Money</h1>
+        <form action="transfermoney">
+            <div class="form-group">
+                <label for="cust_id">Customer ID</label><br>
+                <input type="text" id="cust_id" name="cust_id">
+            </div>
+            <div class="form-group">
+                <label for="bank_name">Bank Name</label><br>
+                <input type="text" id="bank_name" name="bank_name">
+            </div>
+            <div class="form-group">
+                <label for="IFSC">IFSC</label><br>
+                <input type="text" id="IFSC" name="IFSC">
+            </div>
+            <div class="form-group">
+                <label for="senderaccno">Sender Account Number</label><br>
+                <input type="text" id="senderaccno" name="senderaccno">
+            </div>
+            <div class="form-group">
+                <label for="recieverifsc">Receiver IFSC</label><br>
+                <input type="text" id="recieverifsc" name="recieverifsc">
+            </div>
+            <div class="form-group">
+                <label for="recieveraccno">Receiver Account Number</label><br>
+                <input type="text" id="recieveraccno" name="recieveraccno">
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount</label><br>
+                <input type="text" id="amount" name="amount">
+            </div>
+            <div class="form-group">
+                <label for="pin">PIN</label><br>
+                <input type="number" id="pin" name="pin">
+            </div>
+            <input type="submit" value="Transfer">
+        </form>
+    </div>
 </body>
 
 </html>

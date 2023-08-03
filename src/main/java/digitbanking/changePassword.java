@@ -39,13 +39,14 @@ public class changePassword extends HttpServlet {
 			resp.sendRedirect("/BankingApplication/passwordchangedSuccess.html");
 		}
 		else {
-			resp.sendRedirect("/BankingApplication/balanceFail.jsp");
+			resp.sendRedirect("passwordNotChanged.html");
+			
 		}
 		
 		}
 		catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+		
 		}
 	}
 
